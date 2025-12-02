@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Yakult Admin Panel</title>
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body>
+
+<script>
+// Chặn truy cập trái phép
+if (!localStorage.getItem("yakult_admin_token")) {
+    window.location.href = "admin-login.html";
+}
+</script>
+
+<header>
+    <h1>Yakult Admin Panel – Secure Zone</h1>
+    <button onclick="logout()" class="btn delete logout">Đăng xuất</button>
+</header>
+
+<section class="container">
+    <h2>Danh sách Game (Quản trị)</h2>
+    <button id="exportBtn" class="btn export">Xuất games.js</button>
+
+    <div id="gameList" class="game-list"></div>
+
+    <hr>
+
+    <h2>Thêm / Chỉnh sửa Game</h2>
+    <form id="gameForm">
+        <label>Tên Game</label>
+        <input type="text" id="name">
+
+        <label>Mô tả</label>
+        <textarea id="description"></textarea>
+
+        <label>Script</label>
+        <textarea id="script"></textarea>
+
+        <label>Ảnh (PNG/JPG)</label>
+        <input type="file" id="imageInput" accept="image/*">
+
+        <button type="submit" class="btn save">Lưu</button>
+    </form>
+</section>
+
+<script src="assets/data/games.js"></script>
+<script src="assets/js/admin-secure.js"></script>
+
+</body>
+</html>

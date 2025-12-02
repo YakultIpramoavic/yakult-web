@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Yakult Admin Login</title>
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body>
+
+<div class="login-box">
+    <h2>Yakult Admin Login</h2>
+
+    <p id="lockMsg" class="lock-msg"></p>
+
+    <input id="username" type="text" placeholder="Tên đăng nhập">
+    <input id="password" type="password" placeholder="Mật khẩu">
+
+    <button onclick="login()" class="btn save">Đăng nhập</button>
+
+    <p id="error" class="error"></p>
+</div>
+
+<script src="assets/js/login-secure.js"></script>
+</body>
+</html>
