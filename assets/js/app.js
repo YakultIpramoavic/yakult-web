@@ -1,17 +1,18 @@
-const gameListEl = document.getElementById("gameList");
-const detailBox = document.getElementById("gameDetail");
+vconst gameListEl = document.getElementById("gameList");
 const searchInput = document.getElementById("searchInput");
-
 let opened = null;
 
-// Render danh sách game
+/* RENDER GAME LIST */
 function renderGames(list) {
     gameListEl.innerHTML = "";
 
     list.forEach(g => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "game-wrapper";
+
         const card = document.createElement("div");
         card.className = "game-card";
-        card.onclick = () => openGame(g);
+        card.onclick = () => openGame(wrapper, g);
 
         card.innerHTML = `
             <img src="${g.image}" class="game-img">
@@ -21,30 +22,31 @@ function renderGames(list) {
             </div>
         `;
 
-        gameListEl.appendChild(card);
+        const detail = document.createElement("div");
+        detail.className = "inline-detail";
+
+        wrapper.appendChild(card);
+        wrapper.appendChild(detail);
+        gameListEl.appendChild(wrapper);
     });
 }
 
-// Search
-searchInput.oninput = () => {
-    const key = searchInput.value.toLowerCase();
-    const filtered = gamesData.filter(g => g.name.toLowerCase().includes(key));
-    renderGames(filtered);
-};
+/* OPEN INLINE DETAIL */
+function openGame(wrapper, game) {
+    const detail = wrapper.querySelector(".inline-detail");
 
-// Accordion mở
-function openGame(game) {
     if (opened === game.id) {
-        detailBox.innerHTML = "";
+        detail.innerHTML = "";
         opened = null;
         return;
     }
 
+    document.querySelectorAll(".inline-detail").forEach(d => (d.innerHTML = ""));
+
     opened = game.id;
 
-    detailBox.innerHTML = `
+    detail.innerHTML = `
         <div class="detail-card">
-
             <img src="${game.image}" class="detail-img">
 
             <div class="detail-header">
@@ -52,10 +54,9 @@ function openGame(game) {
                 <span class="badge">VIP</span>
             </div>
 
-            <button class="toggle-detail" onclick="toggleDetails()">Hide Details</button>
+            <button class="toggle-detail" onclick="toggleDetails(this)">Hide Details</button>
 
-            <div id="moreDetails" class="detail-body">
-
+            <div class="detail-body">
                 <h3>Features:</h3>
                 <ul class="feature-list">
                     ${game.features.map(f => `<li>✔ ${f}</li>`).join("")}
@@ -64,27 +65,22 @@ function openGame(game) {
                 <a href="${game.script}" class="btn download">Download Script</a>
                 <a href="${game.video}" class="btn review">Watch Review</a>
 
-                <button class="btn copy-btn" onclick="copyScript('${game.script}')">
-                    Copy Script
-                </button>
+                <button class="btn copy-btn" onclick="copyScript('${game.script}')">Copy Script</button>
 
                 <button class="btn report-btn">Report Error</button>
-
             </div>
         </div>
     `;
 }
 
-// Show/hide details
-function toggleDetails() {
-    const box = document.getElementById("moreDetails");
-    const btn = document.querySelector(".toggle-detail");
+function toggleDetails(btn) {
+    const body = btn.parentElement.querySelector(".detail-body");
 
-    if (box.style.display === "none") {
-        box.style.display = "block";
+    if (body.style.display === "none") {
+        body.style.display = "block";
         btn.innerText = "Hide Details";
     } else {
-        box.style.display = "none";
+        body.style.display = "none";
         btn.innerText = "Show Details";
     }
 }
@@ -94,5 +90,12 @@ function copyScript(text) {
     alert("Đã copy script!");
 }
 
-// Initial render
+/* SEARCH */
+searchInput.oninput = () => {
+    const key = searchInput.value.toLowerCase();
+    const filtered = gamesData.filter(g => g.name.toLowerCase().includes(key));
+    renderGames(filtered);
+};
+
+/* INIT */
 renderGames(gamesData);
