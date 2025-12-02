@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Script Games</title>
+    <title>Yakult Ipramovic Scripts</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -11,25 +11,31 @@
 
 <header class="header">
     <div class="logo">
-        <img src="assets/img/logo.png" class="logo-img">
-        <h1 class="logo-text">YAKULT IPRAMOVIC</h1>
+        <span class="logo-dot"></span>
+        <h1 class="logo-text">YAKULT IPRAMOVIC SCRIPTS</h1>
     </div>
+
+    <nav class="nav">
+        <a href="#games">Danh sách game</a>
+        <a href="#">Giới thiệu</a>
+    </nav>
 </header>
 
-<section class="games-section">
-    <h2 class="section-title">Danh sách Game VIP</h2>
+<section class="hero">
+    <h2 class="hero-title">Kho Script & Mod Game VIP</h2>
+    <p class="hero-sub">Tổng hợp script, mod và tool dành cho các tựa game hot.</p>
+    <a href="#games" class="hero-btn">Xem danh sách game</a>
+</section>
 
-    <input type="text" id="searchInput" class="search-box" placeholder="Tìm game...">
+<section id="games" class="games-section">
+    <h2 class="section-title">Danh sách game</h2>
+
+    <input type="text" id="searchInput" class="search-box" placeholder="Tìm theo tên game...">
 
     <div id="gameList" class="game-grid"></div>
-
-    <div id="gameDetail" class="detail-container"></div>
 </section>
 
 <script src="assets/data/games.js"></script>
 <script src="assets/js/app.js"></script>
-
 </body>
 </html>
-
-
