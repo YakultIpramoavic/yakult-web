@@ -8,95 +8,59 @@ function renderGames(list) {
 
     list.forEach(g => {
         const wrapper = document.createElement("div");
-        wrapper.className = "game-wrapper";
+        wrapper.className = "game-card";
 
-        const card = document.createElement("div");
-        card.className = "game-card";
-        card.onclick = () => openGame(wrapper, g);
-
-        card.innerHTML = `
+        wrapper.innerHTML = `
             <img src="${g.image}" class="game-img">
-            <div class="game-info">
+
+            <div class="card-info">
                 <div class="game-title">${g.name}</div>
-                <span class="vip-tag">VIP</span>
+                <span class="tag">VIP</span>
+
+                <button class="show-btn" onclick="toggleDetails(${g.id})">
+                    Show Details
+                </button>
+            </div>
+
+            <div id="details-${g.id}" class="details" style="display:none;">
+                <h3>Features</h3>
+                <ul>${g.features.map(f => `<li>✔ ${f}</li>`).join("")}</ul>
+
+                <a href="${g.script}" class="btn btn-download">Download Script</a>
+                <a href="${g.video}" class="btn btn-video">Watch Review</a>
+                <button onclick="copyScript('${g.script}')" class="btn btn-copy">Copy Script</button>
+                <button class="btn btn-error">Report Error</button>
             </div>
         `;
 
-        const detail = document.createElement("div");
-        detail.className = "inline-detail";
-
-        wrapper.appendChild(card);
-        wrapper.appendChild(detail);
         gameListEl.appendChild(wrapper);
     });
 }
 
-/* OPEN INLINE DETAIL */
-function openGame(wrapper, game) {
-    const detail = wrapper.querySelector(".inline-detail");
+/* SHOW | HIDE DETAILS */
+function toggleDetails(id) {
+    const box = document.getElementById("details-" + id);
+    const btn = event.target;
 
-    if (opened === game.id) {
-        detail.innerHTML = "";
-        opened = null;
-        return;
-    }
-
-    document.querySelectorAll(".inline-detail").forEach(d => (d.innerHTML = ""));
-
-    opened = game.id;
-
-    detail.innerHTML = `
-        <div class="detail-card">
-            <img src="${game.image}" class="detail-img">
-
-            <div class="detail-header">
-                <h2>${game.name}</h2>
-                <span class="badge">VIP</span>
-            </div>
-
-            <button class="toggle-detail" onclick="toggleDetails(this)">Hide Details</button>
-
-            <div class="detail-body">
-                <h3>Features:</h3>
-                <ul class="feature-list">
-                    ${game.features.map(f => `<li>✔ ${f}</li>`).join("")}
-                </ul>
-
-                <a href="${game.script}" class="btn download">Download Script</a>
-                <a href="${game.video}" class="btn review">Watch Review</a>
-
-                <button class="btn copy-btn" onclick="copyScript('${game.script}')">Copy Script</button>
-
-                <button class="btn report-btn">Report Error</button>
-            </div>
-        </div>
-    `;
-}
-
-function toggleDetails(btn) {
-    const body = btn.parentElement.querySelector(".detail-body");
-
-    if (body.style.display === "none") {
-        body.style.display = "block";
+    if (box.style.display === "none") {
+        box.style.display = "block";
         btn.innerText = "Hide Details";
     } else {
-        body.style.display = "none";
+        box.style.display = "none";
         btn.innerText = "Show Details";
     }
 }
 
 function copyScript(text) {
     navigator.clipboard.writeText(text);
-    alert("Đã copy script!");
+    alert("Copied!");
 }
 
 /* SEARCH */
 searchInput.oninput = () => {
     const key = searchInput.value.toLowerCase();
-    const filtered = gamesData.filter(g => g.name.toLowerCase().includes(key));
-    renderGames(filtered);
+    renderGames(gamesData.filter(g => g.name.toLowerCase().includes(key)));
 };
 
 /* INIT */
 renderGames(gamesData);
-
