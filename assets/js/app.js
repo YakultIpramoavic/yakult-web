@@ -1,33 +1,23 @@
-// ===============================
-// Yakult Script Hub – App Logic
-// ===============================
-
-// ELEMENTS
 const gameListEl = document.getElementById("gameList");
+const detailBox = document.getElementById("gameDetail");
 const searchInput = document.getElementById("searchInput");
 
-const modal = document.getElementById("modal");
-const modalClose = document.getElementById("modalClose");
-const modalImg = document.getElementById("modalImg");
-const modalTitle = document.getElementById("modalTitle");
-const modalDesc = document.getElementById("modalDesc");
-const modalScript = document.getElementById("modalScript");
-const copyBtn = document.getElementById("copyBtn");
+let opened = null;
 
-// RENDER GAME CARDS
+// Render danh sách game
 function renderGames(list) {
     gameListEl.innerHTML = "";
 
     list.forEach(g => {
         const card = document.createElement("div");
         card.className = "game-card";
-        card.onclick = () => openModal(g);
+        card.onclick = () => openGame(g);
 
         card.innerHTML = `
             <img src="${g.image}" class="game-img">
             <div class="game-info">
                 <div class="game-title">${g.name}</div>
-                <div class="game-desc">${g.description}</div>
+                <span class="vip-tag">VIP</span>
             </div>
         `;
 
@@ -35,42 +25,74 @@ function renderGames(list) {
     });
 }
 
-// SEARCH FUNCTION
-searchInput.addEventListener("input", () => {
-    const keyword = searchInput.value.toLowerCase().trim();
-
-    const filtered = gamesData.filter(g =>
-        g.name.toLowerCase().includes(keyword)
-    );
-
+// Search
+searchInput.oninput = () => {
+    const key = searchInput.value.toLowerCase();
+    const filtered = gamesData.filter(g => g.name.toLowerCase().includes(key));
     renderGames(filtered);
-});
+};
 
-// OPEN MODAL
-function openModal(game) {
-    modalImg.src = game.image;
-    modalTitle.innerText = game.name;
-    modalDesc.innerText = game.description;
-    modalScript.innerText = game.script || "// Chưa có script";
+// Accordion mở
+function openGame(game) {
+    if (opened === game.id) {
+        detailBox.innerHTML = "";
+        opened = null;
+        return;
+    }
 
-    modal.classList.remove("hidden");
+    opened = game.id;
+
+    detailBox.innerHTML = `
+        <div class="detail-card">
+
+            <img src="${game.image}" class="detail-img">
+
+            <div class="detail-header">
+                <h2>${game.name}</h2>
+                <span class="badge">VIP</span>
+            </div>
+
+            <button class="toggle-detail" onclick="toggleDetails()">Hide Details</button>
+
+            <div id="moreDetails" class="detail-body">
+
+                <h3>Features:</h3>
+                <ul class="feature-list">
+                    ${game.features.map(f => `<li>✔ ${f}</li>`).join("")}
+                </ul>
+
+                <a href="${game.script}" class="btn download">Download Script</a>
+                <a href="${game.video}" class="btn review">Watch Review</a>
+
+                <button class="btn copy-btn" onclick="copyScript('${game.script}')">
+                    Copy Script
+                </button>
+
+                <button class="btn report-btn">Report Error</button>
+
+            </div>
+        </div>
+    `;
 }
 
-// CLOSE MODAL
-modalClose.onclick = () => modal.classList.add("hidden");
-modal.onclick = (e) => {
-    if (e.target === modal) modal.classList.add("hidden");
-};
+// Show/hide details
+function toggleDetails() {
+    const box = document.getElementById("moreDetails");
+    const btn = document.querySelector(".toggle-detail");
 
-// COPY SCRIPT BUTTON
-copyBtn.onclick = () => {
-    const text = modalScript.innerText;
+    if (box.style.display === "none") {
+        box.style.display = "block";
+        btn.innerText = "Hide Details";
+    } else {
+        box.style.display = "none";
+        btn.innerText = "Show Details";
+    }
+}
 
-    navigator.clipboard.writeText(text).then(() => {
-        copyBtn.innerText = "Đã Copy!";
-        setTimeout(() => (copyBtn.innerText = "Copy Script"), 1200);
-    });
-};
+function copyScript(text) {
+    navigator.clipboard.writeText(text);
+    alert("Đã copy script!");
+}
 
-// INITIAL RENDER
+// Initial render
 renderGames(gamesData);
