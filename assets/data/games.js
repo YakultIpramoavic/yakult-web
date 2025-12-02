@@ -309,3 +309,395 @@ const gamesData = [
     video: "https://t.me/YakultIpramovic",
     features: []
   },
+
+  {
+    id: 132,
+    name: "CROWN RUSH (Duplicate)",
+    description: "Antiban – Free Shop – Hack Resources",
+    image: "assets/img/game_132.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 133,
+    name: "GHOST HUNTER IDLE",
+    description: "Antiban – Free Shop – Gold/Exp Drop",
+    image: "assets/img/game_133.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 134,
+    name: "GROW DEMON SLIME (Advanced)",
+    description: "Multi Drop – Fast Clear",
+    image: "assets/img/game_134.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 135,
+    name: "HEROLL",
+    description: "Resources – Vip – Dump Enemy",
+    image: "assets/img/game_135.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 136,
+    name: "HUNTER RAID IDLE RPG",
+    description: "Antiban – Free Shop – Unlock All Features",
+    image: "assets/img/game_136.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 137,
+    name: "HUNTING SNIPPER",
+    description: "Damage",
+    image: "assets/img/game_137.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 138,
+    name: "IDLE BERSERKER",
+    description: "Antiban – Free Shop – Unlock Equip – Unlimited Resources",
+    image: "assets/img/game_138.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 139,
+    name: "LEGEND OF SLIME",
+    description: "Antiban – Free Shop – Key Dungeon – Unlock Character",
+    image: "assets/img/game_139.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 140,
+    name: "LEGEND OF YEOMRA",
+    description: "Gold Drop – Free Shop",
+    image: "assets/img/game_140.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 141,
+    name: "LUCIFER IDLE (Duplicate)",
+    description: "Antiban – Free Shop",
+    image: "assets/img/game_141.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 142,
+    name: "NGUYÊN TỐ 2D",
+    description: "Antiban – Diamond – Unlimited Resources",
+    image: "assets/img/game_142.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 143,
+    name: "PIXEL HUNTER IDLE",
+    description: "Antiban – Hack Resources – Free Shop – Unlock Equip SSS",
+    image: "assets/img/game_143.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 144,
+    name: "RAISING POSEIDON",
+    description: "Antiban – Free Shop – Gold/Exp/Pearl Drop – Damage – Speed",
+    image: "assets/img/game_144.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 145,
+    name: "SKULL GIRLS",
+    description: "Damage – Auto Win – Dump Enemy – No Skill CD",
+    image: "assets/img/game_145.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 146,
+    name: "SLAYER LEGEND",
+    description: "Antiban – Diamond – Gold/Exp Drop – Damage – God Mode",
+    image: "assets/img/game_146.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 147,
+    name: "SLIME HUNTER WILD PATCH (Duplicate)",
+    description: "Free Shop",
+    image: "assets/img/game_147.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 148,
+    name: "UNKNOWN KNIGHT IDLE RPG",
+    description: "Antiban – Rune x1000 – Hack Resources – No Skill CD – No Train Time",
+    image: "assets/img/game_148.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 149,
+    name: "THE DEMONIZED IDLE RPG",
+    description: "Antiban – Free Shop – Exp + Gold Drop",
+    image: "assets/img/game_149.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 150,
+    name: "VALKYRIE IDLE (Duplicate)",
+    description: "Antiban – Unlimited Resources – Buy Costume",
+    image: "assets/img/game_150.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 151,
+    name: "ZOMBIE KINGDOM IDLE RPG (Duplicate)",
+    description: "Free Shop",
+    image: "assets/img/game_151.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 152,
+    name: "AIRSHIP KNIGHT ZERO",
+    description: "Free Shop – Speed Game",
+    image: "assets/img/game_152.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 153,
+    name: "DEMON HUNTER IDLE RPG",
+    description: "Antiban – Free Shop – Speed Game",
+    image: "assets/img/game_153.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 154,
+    name: "DRILL RUSH EX",
+    description: "Free Shop – Speed Game",
+    image: "assets/img/game_154.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 155,
+    name: "DULLAHA RPG",
+    description: "Free Shop – Speed Game",
+    image: "assets/img/game_155.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 156,
+    name: "GODCHER (Speed)",
+    description: "Antiban – No ADS – Currency – Speed Game",
+    image: "assets/img/game_156.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 157,
+    name: "HERO CREW",
+    description: "Antiban – Currency – Speed Game",
+    image: "assets/img/game_157.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 158,
+    name: "HUNTER ORIDIN",
+    description: "Free Shop – Speed Game",
+    image: "assets/img/game_158.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 159,
+    name: "LEGEND OF AVATAR",
+    description: "Damage – Speed Game",
+    image: "assets/img/game_159.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 160,
+    name: "LEGEND OF YEOMRA (Speed)",
+    description: "Free Shop – Speed Game",
+    image: "assets/img/game_160.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 161,
+    name: "PET WAR IDLE RPG",
+    description: "Free Shop – Speed Game",
+    image: "assets/img/game_161.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 162,
+    name: "PIRATE SHIP",
+    description: "Free Shop – Speed Game",
+    image: "assets/img/game_162.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 163,
+    name: "RAISE YOUR KNIGHTLY ORDER",
+    description: "Free Shop – Speed Game",
+    image: "assets/img/game_163.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 164,
+    name: "THE KEEPER IDLE RPG",
+    description: "Free Shop – Speed Game",
+    image: "assets/img/game_164.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 165,
+    name: "IDLE TRANG BỊ THẦN THOẠI",
+    description: "Freeshop – Speed Game",
+    image: "assets/img/game_165.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 166,
+    name: "MA GIÁO HỒI QUY",
+    description: "Freeshop – EXP – Tốc độ di chuyển",
+    image: "assets/img/game_166.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 167,
+    name: "BACCHUS: HIGH TENSION IDLE RPG",
+    description: "Freeshop",
+    image: "assets/img/game_167.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 168,
+    name: "REAL CRICKET 20",
+    description: "MP – MC",
+    image: "assets/img/game_168.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 169,
+    name: "HERO BLITZ",
+    description: "Freeshop",
+    image: "assets/img/game_169.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  },
+  {
+    id: 170,
+    name: "VIP GAME SLOT",
+    description: "Special Yakult VIP Exclusive",
+    image: "assets/img/game_170.png",
+    script: "https://t.me/YakultIpramovic",
+    download: "https://t.me/YakultIpramovic",
+    video: "https://t.me/YakultIpramovic",
+    features: []
+  }
+];
