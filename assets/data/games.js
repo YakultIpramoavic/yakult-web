@@ -7,7 +7,7 @@ const gamesData = [
     script: "https://t.me/YakultIpramovic",
     download: "https://t.me/YakultIpramovic",
     video: "https://t.me/YakultIpramovic",
-    features: []
+    features: ["Antiban", "Freeshop(Account)", "Damage", "Attack Speed", "Diamond", "Totem Count"]
   },
   {
     id: 102,
@@ -701,4 +701,5 @@ const gamesData = [
     features: []
   },
 ];
+
 
