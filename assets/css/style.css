@@ -1,12 +1,11 @@
-/* ===== GENERAL ===== */
 body {
     background: #07131c;
-    color: #dfffee;
-    font-family: Arial, sans-serif;
+    color: #eafff6;
+    font-family: Arial;
     margin: 0;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 .header {
     background: #06101a;
     padding: 15px 20px;
@@ -16,256 +15,125 @@ body {
 }
 
 .logo-dot {
-    width: 14px;
-    height: 14px;
+    width: 14px; height: 14px;
     background: #00ffc8;
-    box-shadow: 0 0 10px #00ffc8;
     border-radius: 50%;
+    box-shadow: 0 0 10px #00ffc8;
     display: inline-block;
 }
 
 .logo-text {
-    font-size: 20px;
     margin-left: 10px;
-    background: linear-gradient(90deg, #00ffc8, #1ea7ff);
+    font-size: 20px;
+    background: linear-gradient(90deg,#00ffc8,#1ea7ff);
     -webkit-background-clip: text;
     color: transparent;
-    font-weight: bold;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
 }
 
 .nav a {
-    color: #89ffe5;
+    color: #a8ffef;
     margin-left: 20px;
     text-decoration: none;
 }
+.nav a:hover { color: #00ffc8; }
 
-.nav a:hover {
-    color: #00ffc8;
-}
-
-/* ===== HERO ===== */
+/* HERO */
 .hero {
     text-align: center;
     padding: 60px 20px;
 }
-
-.hero-title {
-    font-size: 32px;
-    font-weight: bold;
-    color: #00ffc8;
-}
-
-.hero-sub {
-    color: #ccfff2;
-    font-size: 15px;
-    margin-bottom: 20px;
-}
-
+.hero-title { color: #00ffc8; font-size: 32px; }
+.hero-sub { color: #ccfff2; margin-bottom: 20px; }
 .hero-btn {
     background: #00c8ff;
-    padding: 10px 20px;
-    border-radius: 8px;
     color: white;
-    font-weight: bold;
-    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
 }
 
-.hero-btn:hover {
-    background: #0096cc;
-}
-
-/* ===== GAME LIST ===== */
-.games-section {
-    padding: 30px;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 26px;
-    color: #00ffc8;
-    margin-bottom: 20px;
-}
-
-.search-box {
-    width: 90%;
-    max-width: 500px;
-    padding: 12px;
-    border-radius: 12px;
-    border: 1px solid #00ffc855;
-    background: rgba(0,0,0,0.3);
-    margin: 0 auto 25px;
-    color: #fff;
-    display: block;
-}
-
-/* ===== GRID 5 GAME / 1 DÒNG ===== */
+/* GAME GRID = 5 CARD 1 DÒNG */
 .game-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 18px;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+    padding: 20px;
 }
 
-/* ===== GAME CARD ===== */
-.game-wrapper {
-    width: 100%;
-}
-
+/* GAME CARD */
 .game-card {
-    background: #0b1622;
-    border: 1px solid #00ffc822;
+    background: #0c1824;
     border-radius: 12px;
-    padding-bottom: 10px;
-    cursor: pointer;
-    transition: 0.2s;
+    overflow: hidden;
+    box-shadow: 0 0 12px rgba(0,255,200,0.1);
 }
-
-.game-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 10px #00ffc833;
-}
-
 .game-img {
     width: 100%;
     height: 130px;
-    border-radius: 12px 12px 0 0;
     object-fit: cover;
-}
-
-.game-info {
-    padding: 10px;
 }
 
 .game-title {
     font-weight: bold;
-    color: #b3fff2;
+    font-size: 17px;
+    color: #aaffee;
 }
 
-.vip-tag {
+.card-info {
+    padding: 12px;
+}
+
+.tag {
     background: #ff0066;
-    padding: 4px 7px;
-    border-radius: 6px;
-    font-size: 11px;
-    color: white;
-}
-
-/* ===== INLINE DETAIL (ACCORDION) ===== */
-.inline-detail {
-    margin-top: 10px;
-}
-
-.detail-card {
-    background: #0c1926;
-    border: 1px solid #00ffc855;
-    border-radius: 12px;
-    padding: 15px;
-}
-
-.detail-img {
-    width: 100%;
-    border-radius: 12px;
-}
-
-.detail-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.badge {
-    background: #ff0066;
-    padding: 4px 10px;
+    padding: 4px 8px;
     border-radius: 8px;
     color: white;
+    font-size: 12px;
 }
 
-.toggle-detail {
-    width: 100%;
-    padding: 10px;
+.show-btn {
     margin-top: 10px;
+    padding: 10px;
+    width: 100%;
     border-radius: 10px;
-    border: 1px solid #00ffc855;
+    border: 1px solid #00ffc877;
     background: transparent;
     color: #00ffc8;
     cursor: pointer;
 }
 
-.detail-body {
-    margin-top: 10px;
+/* DETAILS TAB */
+.details {
+    background: #0e1c29;
+    padding: 15px;
+    border-top: 1px solid #00ffc833;
 }
 
-.feature-list li {
+.details h3 {
+    margin: 0 0 10px 0;
+}
+
+.details ul li {
     list-style: none;
-    padding: 3px 0;
-    color: #dffff5;
+    padding: 4px 0;
 }
 
-/* BUTTONS */
 .btn {
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    border-radius: 10px;
-    font-weight: bold;
-    text-align: center;
     display: block;
+    padding: 12px;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
     text-decoration: none;
 }
 
-.download {
-    background: #00ff88;
-    color: #002214;
-}
+.btn-download { background: #00ff88; color: black; }
+.btn-video { background: #0066ff; }
+.btn-copy { background: transparent; border:1px solid #00ffc8;color:#00ffc8; }
+.btn-error { background: #ff0033; }
 
-.review {
-    background: #0066ff;
-    color: white;
-}
-
-.copy-btn {
-    background: transparent;
-    border: 1px solid #00ffc8;
-    color: #00ffc8;
-}
-
-.report-btn {
-    background: #ff0033;
-    color: white;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1100px) {
-    .game-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (max-width: 800px) {
-    .game-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .game-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 400px) {
-    .game-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-.logo-img {
-    height: 45px;
-    width: auto;
-    margin-right: 10px;
-    filter: drop-shadow(0 0 6px #00ffbf);
-    border-radius: 6px;
-}
-
+/* MOBILE */
+@media (max-width: 1000px) { .game-grid { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 700px) { .game-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 450px) { .game-grid { grid-template-columns: repeat(1,1fr); } }
