@@ -1,205 +1,65 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YAKULT Scripts - Game Scripts & Mods</title>
-  <meta
-    name="description"
-    content="YAKULT Scripts - Tổng hợp scripts / mods cho nhiều tựa game. Cập nhật liên tục, link rõ ràng, dễ tìm kiếm."
-  >
-  <link rel="stylesheet" href="./assets/css/style.css" />
-
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <title>Yakult Script Hub – Game Mod & Script Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
-  <div class="page">
+
     <!-- HEADER -->
     <header class="header">
-      <div class="container header-inner">
-        <a href="#top" class="logo">
-          <div class="logo-mark">Y</div>
-          <div class="logo-text">
-            <div class="logo-title">YAKULT</div>
-            <div class="logo-subtitle">Game Scripts &amp; Mods</div>
-          </div>
-        </a>
-
-        <nav class="nav">
-          <a href="#games">Game Lists</a>
-          <a href="#how">Tutorial</a>
-          <a href="#faq">FAQ</a>
-        </nav>
-
-        <div class="header-actions">
-          <button class="btn-outline" id="btn-telegram">Telegram</button>
+        <div class="logo">
+            <span class="logo-dot"></span>
+            <h1 class="logo-text">Scipt Made By xGh0stZ</h1>
         </div>
-
-        <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
-          <span></span><span></span>
-        </button>
-      </div>
+        <nav class="nav">
+            <a href="#games">Danh sách game</a>
+            <a href="#about">Giới thiệu</a>
+        </nav>
     </header>
 
-    <!-- MAIN -->
-    <main id="top">
-      <!-- HERO -->
-      <section class="hero">
-        <div class="container hero-inner">
-          <div class="hero-content">
-            <span class="badge">VIP Scripts</span>
-            <h1>Scirpt for many hot game!!!</h1>
-            <p>
-              Script for games. Contact on telegram to buy any script!!!
-            </p>
+    <!-- HERO -->
+    <section class="hero">
+        <h1 class="hero-title">Kho Script & Mod Game VIP</h1>
+        <p class="hero-desc">
+            Tổng hợp script, mod và tool dành cho các tựa game hot.  
+        </p>
+        <a href="#games" class="btn-primary">Xem danh sách game</a>
+    </section>
 
-            <div class="hero-actions">
-              <button class="btn-primary" id="btn-hero-telegram">Join Telegram</button>
-              <button class="btn-ghost" id="btn-hero-scroll">Game Lists</button>
-            </div>
+    <!-- GAME GRID -->
+    <section id="games" class="games-section">
+        <h2 class="section-title">Danh sách game</h2>
 
-            <div class="hero-stats">
-              <div>
-                <strong id="stat-games">50+</strong>
-                <span>Script</span>
-              </div>
-              <div>
-                <strong>Cập nhật</strong>
-                <span>Theo phiên bản game mới</span>
-              </div>
-              <div>
-                <strong>Không rác</strong>
-                <span>Link rõ ràng, ít quảng cáo</span>
-              </div>
-            </div>
-          </div>
+        <input type="text" id="searchInput" class="search-box" placeholder="Tìm theo tên game…">
 
-          <div class="hero-card">
-            <div class="hero-card-header">
-              <span class="status-dot"></span>
-              <span>🔥New Script🔥</span>
-              <span class="tag">DEMO</span>
-            </div>
-            <div class="hero-card-body">
-              <h2>Ví dụ: Fortiass Saga: Idle RPG</h2>
-              <ul>
-                <li>Antiban</li>
-                <li>Freeshop</li>
-                <li>Speed game</li>
-              </ul>
-              <p class="hero-card-note">
-                ~100 script game.
-              </p>
-            </div>
-          </div>
+        <div id="gameList" class="game-grid">
+            <!-- App.js sẽ render game vào đây -->
         </div>
-      </section>
+    </section>
 
-      <!-- GAME LIST -->
-      <section id="games" class="section section-games">
-        <div class="container">
-          <div class="section-header">
-            <h2>List Scripts Game</h2>
-           
-          </div>
+    <!-- MODAL -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="modalClose" class="modal-close">×</span>
 
-          <div class="games-toolbar">
-            <div class="search-box">
-              <input
-                type="text"
-                id="search-input"
-                placeholder="Tìm theo tên game, thể loại, tag..."
-                autocomplete="off"
-              />
-            </div>
-            <div class="filters">
-              <select id="filter-status">
-                <option value="all">Tất cả trạng thái</option>
-                <option value="active">Hoạt động</option>
-                <option value="update">Đang update</option>
-                <option value="soon">Sắp ra mắt</option>
-              </select>
-              <select id="filter-platform">
-                <option value="all">Tất cả</option>
-                <option value="Mobile">Mobile</option>
-                <option value="PC">PC</option>
-                <option value="Other">Khác</option>
-              </select>
-            </div>
-          </div>
+            <img id="modalImg" class="modal-img" src="">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
 
-          <div id="games-grid" class="games-grid">
-            <!-- JS sẽ render card game ở đây -->
-          </div>
+            <h3>Script</h3>
+            <pre id="modalScript" class="modal-script"></pre>
 
-          <p id="empty-state" class="empty-state" hidden>
-            Không tìm thấy game phù hợp với từ khoá / bộ lọc hiện tại.
-          </p>
+            <button id="copyBtn" class="btn-copy">Copy Script</button>
         </div>
-      </section>
+    </div>
 
-      <!-- HOW IT WORKS -->
-      <section id="how" class="section section-how">
-        <div class="container">
-          <div class="section-header">
-            <h2>How to get script ?</h2>
-          </div>
-          <ol class="steps">
-            <li>
-              <span class="step-number">1</span>
-              <div>
-                <h3>Contacts On Telegram</h3>
-                <p>Contacts on telegram to buy script!!!</p>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
+    <!-- JS -->
+    <script src="assets/data/games.js"></script>
+    <script src="assets/js/app.js"></script>
 
-      <!-- FAQ -->
-      <section id="faq" class="section section-faq">
-        <div class="container">
-          <div class="section-header">
-            <h2>FAQ</h2>
-            <p>Contact on telegram to buy or request any script for any games!</p>
-          </div>
-
-          <div class="faq-grid">
-            <div class="faq-item">
-              <h3>The game is always updated when there is a new version.</h3>
-            </div>
-            <div class="faq-item">
-              <h3>Works on PC/Mobile/Cloud Phone</h3>
-            </div>
-            <div class="faq-item">
-            </div>
-            <div class="faq-item">
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> YAKULT Scripts. All rights reserved.</p>
-        <div class="footer-links">
-          <a href="#top">Lên đầu trang</a>
-          <a href="#faq">FAQ</a>
-        </div>
-      </div>
-    </footer>
-  </div>
-
-  <!-- JS -->
-  <script src="./assets/data/games.js"></script>
-  <script src="./assets/js/app.js"></script>
 </body>
 </html>
-
-
-
