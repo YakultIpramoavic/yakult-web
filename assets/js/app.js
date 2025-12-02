@@ -1,4 +1,4 @@
-vconst gameListEl = document.getElementById("gameList");
+const gameListEl = document.getElementById("gameList");
 const searchInput = document.getElementById("searchInput");
 let opened = null;
 
@@ -99,3 +99,4 @@ searchInput.oninput = () => {
 
 /* INIT */
 renderGames(gamesData);
+
