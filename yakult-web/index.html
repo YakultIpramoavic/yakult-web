@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YAKULT Scripts - Game Scripts & Mods</title>
+  <meta
+    name="description"
+    content="YAKULT Scripts - Tổng hợp scripts / mods cho nhiều tựa game. Cập nhật liên tục, link rõ ràng, dễ tìm kiếm."
+  >
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header-inner">
+        <a href="#top" class="logo">
+          <div class="logo-mark">Y</div>
+          <div class="logo-text">
+            <div class="logo-title">YAKULT</div>
+            <div class="logo-subtitle">Game Scripts &amp; Mods</div>
+          </div>
+        </a>
+
+        <nav class="nav">
+          <a href="#games">Danh sách game</a>
+          <a href="#how">Hướng dẫn</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="btn-outline" id="btn-telegram">Telegram</button>
+        </div>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <span class="badge">Premium Scripts</span>
+            <h1>Kho scripts / mods cho<br>nhiều tựa game hot.</h1>
+            <p>
+              Trang tổng hợp script, mod, config cho các game mobile/PC. Giao diện rõ ràng, dễ tìm, link tập trung về Telegram của bạn.
+            </p>
+
+            <div class="hero-actions">
+              <button class="btn-primary" id="btn-hero-telegram">Vào channel Telegram</button>
+              <button class="btn-ghost" id="btn-hero-scroll">Xem danh sách game</button>
+            </div>
+
+            <div class="hero-stats">
+              <div>
+                <strong id="stat-games">50+</strong>
+                <span>Game có scripts</span>
+              </div>
+              <div>
+                <strong>Cập nhật</strong>
+                <span>Theo phiên bản game mới</span>
+              </div>
+              <div>
+                <strong>Không rác</strong>
+                <span>Link rõ ràng, ít quảng cáo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="hero-card-header">
+              <span class="status-dot"></span>
+              <span>Script nổi bật</span>
+              <span class="tag">DEMO</span>
+            </div>
+            <div class="hero-card-body">
+              <h2>Ví dụ: Guardian Tales</h2>
+              <ul>
+                <li>Damage / Defense / Speed</li>
+                <li>Skill no cooldown, one hit</li>
+                <li>Unlimited stamina, auto farm</li>
+              </ul>
+              <p class="hero-card-note">
+                *Chỉ là ví dụ. Bạn có thể đổi thành game/ script nổi bật của bạn.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GAME LIST -->
+      <section id="games" class="section section-games">
+        <div class="container">
+          <div class="section-header">
+            <h2>Danh sách game &amp; scripts</h2>
+            <p>Toàn bộ dữ liệu được lấy từ file <code>assets/data/games.js</code>. Bạn chỉ cần sửa file đó để thêm ~100 game.</p>
+          </div>
+
+          <div class="games-toolbar">
+            <div class="search-box">
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Tìm theo tên game, thể loại, tag..."
+                autocomplete="off"
+              />
+            </div>
+            <div class="filters">
+              <select id="filter-status">
+                <option value="all">Tất cả trạng thái</option>
+                <option value="active">Hoạt động</option>
+                <option value="update">Đang update</option>
+                <option value="soon">Sắp ra mắt</option>
+              </select>
+              <select id="filter-platform">
+                <option value="all">Tất cả nền tảng</option>
+                <option value="Mobile">Mobile</option>
+                <option value="PC">PC</option>
+                <option value="Other">Khác</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="games-grid" class="games-grid">
+            <!-- JS sẽ render card game ở đây -->
+          </div>
+
+          <p id="empty-state" class="empty-state" hidden>
+            Không tìm thấy game phù hợp với từ khoá / bộ lọc hiện tại.
+          </p>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section id="how" class="section section-how">
+        <div class="container">
+          <div class="section-header">
+            <h2>Cách người dùng lấy script</h2>
+            <p>Giải thích nhanh 3 bước, bạn có thể tuỳ chỉnh nội dung.</p>
+          </div>
+          <ol class="steps">
+            <li>
+              <span class="step-number">1</span>
+              <div>
+                <h3>Chọn game</h3>
+                <p>Người dùng cuộn xuống danh sách game, dùng ô tìm kiếm để tìm đúng game.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-number">2</span>
+              <div>
+                <h3>Mở link tải</h3>
+                <p>Bấm nút “Tải script” &rarr; chuyển sang Telegram / Drive / web khác của bạn.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-number">3</span>
+              <div>
+                <h3>Làm theo hướng dẫn</h3>
+                <p>Hướng dẫn cài đặt / sử dụng bạn để trong channel hoặc trong file đính kèm.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section section-faq">
+        <div class="container">
+          <div class="section-header">
+            <h2>FAQ</h2>
+            <p>Một số câu hỏi thường gặp. Bạn có thể chỉnh sửa nội dung tuỳ ý.</p>
+          </div>
+
+          <div class="faq-grid">
+            <div class="faq-item">
+              <h3>Website này có chứa file không?</h3>
+              <p>Không bắt buộc. Bạn có thể để tất cả file trên Telegram / Google Drive, website chỉ là nơi tổng hợp link.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Có an toàn cho tài khoản không?</h3>
+              <p>Mọi hình thức mod / script đều có rủi ro. Người dùng cần tự chịu trách nhiệm khi sử dụng.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Làm sao thêm game mới?</h3>
+              <p>Mở file <code>assets/data/games.js</code> và thêm 1 object mới vào mảng <code>GAMES</code>. Thêm bao nhiêu game cũng được.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Deploy ở đâu?</h3>
+              <p>Bạn có thể dùng Vercel để deploy miễn phí. Chỉ cần trỏ project vào folder này là xong.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> YAKULT Scripts. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#top">Lên đầu trang</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- JS -->
+  <script src="./assets/data/games.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>
