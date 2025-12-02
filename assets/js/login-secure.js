@@ -10,7 +10,7 @@ const HASH = "0348b3fed24e001bc5a8ce4968a46e1a9f88f95f89b9aa93c53810e4507996ee";
 const PEPPER = "YAKULT_PEPPER_KEY_92@#%*!!";
 
 let maxAttempts = 5;
-let lockMinutes = 10;
+let lockMinutes = 0;
 
 // ======================
 // SHA-256
@@ -83,3 +83,4 @@ function failAttempt() {
 function showError(msg) {
     document.getElementById("error").innerText = msg;
 }
+
