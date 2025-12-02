@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Yakult Admin Panel</title>
+    <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+
+<header>
+    <h1>Yakult Script Hub — Admin Panel</h1>
+</header>
+
+<section class="container">
+
+    <h2>Danh sách Game</h2>
+
+    <button id="exportBtn" class="btn export">Xuất games.js</button>
+
+    <div id="gameList" class="game-list"></div>
+
+    <hr>
+
+    <h2>Thêm / Sửa Game</h2>
+
+    <form id="gameForm">
+        <label>Tên Game</label>
+        <input type="text" id="name">
+
+        <label>Mô tả</label>
+        <textarea id="description"></textarea>
+
+        <label>Script</label>
+        <textarea id="script"></textarea>
+
+        <label>Ảnh Game (PNG/JPG)</label>
+        <input type="file" id="imageInput" accept="image/*">
+
+        <input type="hidden" id="editId">
+
+        <button type="submit" class="btn save">Lưu Game</button>
+    </form>
+</section>
+
+<script src="assets/data/games.js"></script>
+<script src="assets/js/admin.js"></script>
+
+</body>
+</html>
