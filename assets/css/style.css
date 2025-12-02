@@ -127,7 +127,13 @@ body {
     margin-top: 10px;
     text-decoration: none;
 }
-
+.logo-img {
+    height: 45px;
+    width: auto;
+    margin-right: 10px;
+    filter: drop-shadow(0 0 6px #00ffbf);
+    border-radius: 6px;
+}
 .btn-download { background: #00ff88; color: black; }
 .btn-video { background: #0066ff; }
 .btn-copy { background: transparent; border:1px solid #00ffc8;color:#00ffc8; }
@@ -137,3 +143,4 @@ body {
 @media (max-width: 1000px) { .game-grid { grid-template-columns: repeat(3,1fr); } }
 @media (max-width: 700px) { .game-grid { grid-template-columns: repeat(2,1fr); } }
 @media (max-width: 450px) { .game-grid { grid-template-columns: repeat(1,1fr); } }
+
