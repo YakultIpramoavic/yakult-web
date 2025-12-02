@@ -2,14 +2,18 @@
 // CẤU HÌNH BẢO MẬT
 // ======================
 const ADMIN_USERNAME = "yakult_admin";
-const HASH = "f88496b0dd14940bb0e3c1a5e96b4ea737c75406e42b065bfeeba4eaa0f2e8c3";
+
+// HASH mật khẩu mới (yakult2024)
+const HASH = "0348b3fed24e001bc5a8ce4968a46e1a9f88f95f89b9aa93c53810e4507996ee";
+
+// Pepper bí mật
 const PEPPER = "YAKULT_PEPPER_KEY_92@#%*!!";
 
 let maxAttempts = 5;
 let lockMinutes = 10;
 
 // ======================
-// MÃ HOÁ KÉP SHA256
+// SHA-256
 // ======================
 async function sha256(msg) {
     const data = new TextEncoder().encode(msg);
@@ -19,16 +23,19 @@ async function sha256(msg) {
         .join("");
 }
 
+// Hash kép
 async function doubleHash(pass) {
-    const hash1 = await sha256(pass + PEPPER);
-    const hash2 = await sha256(hash1);
-    return hash2;
+    const h1 = await sha256(pass + PEPPER);
+    const h2 = await sha256(h1);
+    return h2;
 }
 
 // ======================
 // LOGIN + ANTI BRUTE FORCE
 // ======================
 async function login() {
+
+    // Kiểm tra khóa
     const lockUntil = localStorage.getItem("yakult_lock_time");
     const now = Date.now();
 
@@ -39,8 +46,8 @@ async function login() {
         return;
     }
 
-    const user = username.value.trim();
-    const pass = password.value;
+    const user = document.getElementById("username").value.trim();
+    const pass = document.getElementById("password").value;
 
     if (user !== ADMIN_USERNAME) {
         failAttempt();
@@ -57,11 +64,12 @@ async function login() {
     // LOGIN THÀNH CÔNG
     localStorage.setItem("yakult_admin_token", "logged");
     localStorage.setItem("yakult_last_active", Date.now());
+
     window.location.href = "yakult-security-zone-91022.html";
 }
 
 function failAttempt() {
-    let attempts = localStorage.getItem("yakult_attempts") || 0;
+    let attempts = parseInt(localStorage.getItem("yakult_attempts") || "0");
     attempts++;
     localStorage.setItem("yakult_attempts", attempts);
 
