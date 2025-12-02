@@ -37,8 +37,7 @@ const gamesData = [
   {
     id: 106,
     name: "DARK CLAN IDLE RPG",
-    description:
-      "Antiban – Free Shop – Gold Drop – Attack Speed – No Skill CD",
+    description: "Antiban – Free Shop – Gold Drop – Attack Speed – No Skill CD",
     image: "assets/img/game_106.png",
     script: ""
   },
@@ -150,16 +149,14 @@ const gamesData = [
   {
     id: 122,
     name: "VALKYRIE IDLE",
-    description:
-      "Free Shop Costume – Drop Item – Unlimited Ruby – Unlock Pass",
+    description: "Free Shop Costume – Drop Item – Unlimited Ruby – Unlock Pass",
     image: "assets/img/game_122.png",
     script: ""
   },
   {
     id: 123,
     name: "TAILED DEMON SLAYER RISE",
-    description:
-      "Antiban – Diamond – Skip Tutorial – Unlimited Currency",
+    description: "Antiban – Diamond – Skip Tutorial – Unlimited Currency",
     image: "assets/img/game_123.png",
     script: ""
   },
@@ -173,8 +170,7 @@ const gamesData = [
   {
     id: 125,
     name: "AFK THREEKINGDOM IDLE RPG",
-    description:
-      "Antiban – Free Shop – Damage – No Skill CD – Hack Resources",
+    description: "Antiban – Free Shop – Damage – No Skill CD – Hack Resources",
     image: "assets/img/game_125.png",
     script: ""
   },
@@ -265,16 +261,14 @@ const gamesData = [
   {
     id: 138,
     name: "IDLE BERSERKER",
-    description:
-      "Antiban – Free Shop – Unlock Equip – Unlimited Resources",
+    description: "Antiban – Free Shop – Unlock Equip – Unlimited Resources",
     image: "assets/img/game_138.png",
     script: ""
   },
   {
     id: 139,
     name: "LEGEND OF SLIME",
-    description:
-      "Antiban – Free Shop – Key Dungeon – Unlock Character",
+    description: "Antiban – Free Shop – Key Dungeon – Unlock Character",
     image: "assets/img/game_139.png",
     script: ""
   },
@@ -302,8 +296,7 @@ const gamesData = [
   {
     id: 143,
     name: "PIXEL HUNTER IDLE",
-    description:
-      "Antiban – Hack Resources – Free Shop – Unlock Equip SSS",
+    description: "Antiban – Hack Resources – Free Shop – Unlock Equip SSS",
     image: "assets/img/game_143.png",
     script: ""
   },
@@ -318,8 +311,7 @@ const gamesData = [
   {
     id: 145,
     name: "SKULL GIRLS",
-    description:
-      "Damage – Auto Win – Dump Enemy – No Skill CD",
+    description: "Damage – Auto Win – Dump Enemy – No Skill CD",
     image: "assets/img/game_145.png",
     script: ""
   },
